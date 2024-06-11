@@ -7,10 +7,10 @@ return {
     
     config = function()
       local builtin = require("telescope.builtin")
-      mapKeys('<leader>f', builtin.find_files)
-      mapKeys('<leader>g', builtin.live_grep)
-      mapKeys('<leader>b', builtin.buffers)
-      mapKeys('<leader>h', builtin.help_tags)
+      mapKeys('<leader>tf', builtin.find_files)
+      mapKeys('<leader>tg', builtin.live_grep)
+      mapKeys('<leader>tb', builtin.buffers)
+      mapKeys('<leader>th', builtin.help_tags)
     end
   },
   {

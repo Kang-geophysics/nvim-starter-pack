@@ -57,8 +57,12 @@ nvim
 
 - `telescope`
     </br>[Find, Filter, Preview, Pick for Neovim](https://github.com/nvim-telescope/telescope.nvim)
+
 - `markdown-preview`
     </br>[Markdown Preview for Neovim](https://github.com/iamcco/markdown-preview.nvim)
+
+- `lsp-zero`
+    </br>[Lots of lsp for lazy.nvim](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/lazy-loading-with-lazy-nvim.md)
 
 ## Tips
 - Broken fonts and icons
@@ -75,7 +79,7 @@ nvim
     - The wide world of customization opens up a whole new world for those who want to customize their text editor.
 - Compatibility with Windows
     - Lint or LSP for `nvim-cmp` requires `npm`, which is the package manager for Node js.
-    - I think the way to apply`nvim-cmp` and `lsp` for python is very hard. I'm trying to work on it.
+    - I think the way to apply`nvim-cmp` and `lsp` for python is very hard. However, if you download`lsp-zero`, it works well.
 
 ## Reference
 - [Neovim-starter](https://github.com/moong00n/neovim-starter)

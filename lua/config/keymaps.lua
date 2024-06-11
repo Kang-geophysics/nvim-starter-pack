@@ -17,3 +17,6 @@ mapKey('<leader>h',':nohlsearch<CR>')
 -- indent
 mapKey('<C-,>','<gv','v') -- indent right
 mapKey('<C-.>','>gv','v') -- indent left
+
+-- lsp-zero formatting
+mapKey('<leader>fmt',vim.lsp.buf.format)
