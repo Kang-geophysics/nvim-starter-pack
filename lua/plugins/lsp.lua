@@ -16,7 +16,7 @@ return{
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require('mason-lspconfig').setup({
-        ensure_installed ={"lua_ls","pylsp"}  })
+        ensure_installed ={"lua_ls"}  })
     end
   },
   {
@@ -25,7 +25,6 @@ return{
     config = function()
       local lspconfig = require('lspconfig')
       lspconfig.lua_ls.setup({})
-      lspconfig.pylsp.setup({})
       mapKeys('K'  , vim.lsp.buf.hover) -- variable check
       mapKeys('gd' , vim.lsp.buf.definition) -- go to definition
       mapKeys('<leader>ca', vim.lsp.buf.code_action) -- suggest action
