@@ -1,3 +1,8 @@
+-- Mason Language Server Protocol (LSP) Manager
+-- It requires mason-lsp and nvim-lsp configs.
+-- This lua file includes everything related with LSP
+-- command line mode ':Mason' 
+local mapKeys = require("utils.keyMapper").mapKey
 return{
   {
     'VonHeikemen/lsp-zero.nvim',
@@ -13,44 +18,11 @@ return{
   {
     'williamboman/mason.nvim',
     lazy = false,
-    config = true,
-  },
-
-  -- Autocompletion
-  {
-    'hrsh7th/nvim-cmp',
-    event = 'InsertEnter',
-    dependencies = {
-      {'L3MON4D3/LuaSnip'},
-    },
     config = function()
-      -- Here is where you configure the autocompletion settings.
-      local lsp_zero = require('lsp-zero')
-      lsp_zero.extend_cmp()
-
-      -- And you can configure cmp even more, if you want to.
-      local cmp = require('cmp')
-      local cmp_action = lsp_zero.cmp_action()
-
-      cmp.setup({
-        formatting = lsp_zero.cmp_format({details = true}),
-        mapping = cmp.mapping.preset.insert({
-          ['<C-Space>'] = cmp.mapping.complete(),
-          ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-d>'] = cmp.mapping.scroll_docs(4),
-          ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-          ['<C-b>'] = cmp_action.luasnip_jump_backward(),
-        }),
-        snippet = {
-          expand = function(args)
-            require('luasnip').lsp_expand(args.body)
-          end,
-        },
-      })
+      require('mason').setup()
     end
   },
-
-  -- LSP
+-- LSP
   {
     'neovim/nvim-lspconfig',
     cmd = {'LspInfo', 'LspInstall', 'LspStart'},
@@ -63,7 +35,11 @@ return{
       -- This is where all the LSP shenanigans will live
       local lsp_zero = require('lsp-zero')
       lsp_zero.extend_lspconfig()
-
+      local lspconfig = require('lspconfig')
+      lspconfig.lua_ls.setup({})
+      mapKeys('K'  , vim.lsp.buf.hover) -- variable check
+      mapKeys('gd' , vim.lsp.buf.definition) -- go to definition
+      mapKeys('<leader>ca', vim.lsp.buf.code_action) -- suggest action
       --- if you want to know more about lsp-zero and mason.nvim
       --- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
       lsp_zero.on_attach(function(client, bufnr)
