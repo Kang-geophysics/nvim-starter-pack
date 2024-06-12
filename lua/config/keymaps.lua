@@ -14,7 +14,7 @@ mapKey('<C-l>', '<C-w>l') -- Right
 mapKey('<leader>h', ':nohlsearch<CR>')
 
 -- indent
-mapKey('<C-[>', '<gv', 'v') -- indent right
+mapKey('<C-p>', '<gv', 'v') -- indent right
 mapKey('<C-]>', '>gv', 'v') -- indent left
 
 -- Mapping for LSP configuration
