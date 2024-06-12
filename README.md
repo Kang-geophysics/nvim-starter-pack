@@ -22,7 +22,7 @@ nvim
 
 ## Folder Tree
 - Windows
-    - App/Data/Local/nvim/
+    - AppData/Local/nvim/
         - config/
         - plugins/
         - utils/
@@ -49,11 +49,17 @@ nvim
 - `nvim-treesitter`
     </br>[Provide the syntax highlight for Neovim](https://github.com/nvim-treesitter/nvim-treesitter)
 
-- `LSP with Mason`
-    </br>[Language Server Protocol for Neovim](https://github.com/williamboman/mason.nvim)
+- `LSP Zero`:   
+    </br>[Collection of LSP packages with lazy](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/lazy-loading-with-lazy-nvim.md)
+> `lsp-zero` is the collection of LSP packages, which is analyzing your code to tell you what to do.
+> The collections are as follows:
+>    - Neovim - LSPconfig (nvim-lspconfig): Bridges Neovim with LSPconfig  
+>    - Mason - LSPconfig (mason-lspconfig): Bridges Mason with LSPconfig
+>    - Mason (mason): LSP pacakge manager for Neovim 
+>    - Luasnip
 
 - `nvim-cmp`
-    </br>[A CoMPletion plugin for Neovim](https://github.com/hrsh7th/nvim-cmp)
+    </br>[Auto CoMPletion plugin for Neovim](https://github.com/hrsh7th/nvim-cmp)
 
 - `telescope`
     </br>[Find, Filter, Preview, Pick for Neovim](https://github.com/nvim-telescope/telescope.nvim)
@@ -61,15 +67,12 @@ nvim
 - `markdown-preview`
     </br>[Markdown Preview for Neovim](https://github.com/iamcco/markdown-preview.nvim)
 
-- `lsp-zero`
-    </br>[Lots of lsp for lazy.nvim](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/lazy-loading-with-lazy-nvim.md)
 
 ## Tips
 - Broken fonts and icons
-    Make sure you have "Nerd Fonts"
+    - Make sure you have **"Nerd Fonts"**
     You can install just clicking `*.ttf` file.
-    But I recommend installing as a tff for all users.
-- [Nerd Fonts](https://www.nerdfonts.com/)
+    But I recommend installing as a tff **for all users**. [(Nerd Fonts)](https://www.nerdfonts.com/)
 
 ## Review
 - Same behavior as `VIM`
@@ -79,7 +82,7 @@ nvim
     - The wide world of customization opens up a whole new world for those who want to customize their text editor.
 - Compatibility with Windows
     - Lint or LSP for `nvim-cmp` requires `npm`, which is the package manager for Node js.
-    - I think the way to apply`nvim-cmp` and `lsp` for python is very hard. However, if you download`lsp-zero`, it works well.
 
 ## Reference
 - [Neovim-starter](https://github.com/moong00n/neovim-starter)
+- [lsp-zero.nvim introduction](https://lsp-zero.netlify.app/v3.x/introduction.html)
