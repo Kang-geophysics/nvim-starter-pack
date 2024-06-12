@@ -56,7 +56,6 @@ return {
           function(server_name)
             require('lspconfig')[server_name].setup({})
           end,
-
           -- this is the "custom handler" for `lua_ls`
           lua_ls = function()
             -- (Optional) Configure lua language server for neovim
