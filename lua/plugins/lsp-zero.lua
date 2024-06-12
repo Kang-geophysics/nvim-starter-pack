@@ -1,9 +1,8 @@
 -- Mason Language Server Protocol (LSP) Manager
 -- It requires mason-lsp and nvim-lsp configs.
 -- This lua file includes everything related with LSP
--- command line mode ':Mason' 
-local mapKeys = require("utils.keyMapper").mapKey
-return{
+-- command line mode ':Mason'
+return {
   -- lsp-zero
   {
     'VonHeikemen/lsp-zero.nvim',
@@ -27,11 +26,11 @@ return{
   -- nvim-lspconfig/mason-lspconfig
   {
     'neovim/nvim-lspconfig',
-    cmd = {'LspInfo', 'LspInstall', 'LspStart'},
-    event = {'BufReadPre', 'BufNewFile'},
+    cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'williamboman/mason-lspconfig.nvim'},
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'williamboman/mason-lspconfig.nvim' },
     },
     config = function()
       -- This is where all the LSP shenanigans will live
@@ -66,16 +65,6 @@ return{
           end,
         }
       })
-      -- Mapping for LSP configuration
-      -- Displays hover information about the symbol under the cursor.
-      mapKeys('K' , vim.lsp.buf.hover)
-      -- Go to Definition of the symbol under the cursor.
-      mapKeys('gd', vim.lsp.buf.definition)
-      -- Go to Declaration of the symbol under the cursor.
-      mapKeys('gD', vim.lsp.buf.declaration)
-      -- Selects a code action available at the current cursor position.
-      mapKeys('<leader>ca', vim.lsp.buf.code_action)
-
     end
   }
 }

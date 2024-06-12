@@ -15,8 +15,17 @@ mapKey('<C-l>','<C-w>l') -- Right
 mapKey('<leader>h',':nohlsearch<CR>')
 
 -- indent
-mapKey('<C-,>','<gv','v') -- indent right
-mapKey('<C-.>','>gv','v') -- indent left
+mapKey('<C-[>','<gv','v') -- indent right
+mapKey('<C-]>','>gv','v') -- indent left
 
--- lsp-zero formatting
+-- Mapping for LSP configuration
+-- Auto formatting
 mapKey('<leader>fmt',vim.lsp.buf.format)
+-- Displays hover information about the symbol under the cursor.
+mapKey('K', vim.lsp.buf.hover)
+-- Go to Definition of the symbol under the cursor.
+mapKey('gd', vim.lsp.buf.definition)
+-- Go to Declaration of the symbol under the cursor.
+mapKey('gD', vim.lsp.buf.declaration)
+-- Selects a code action available at the current cursor position.
+mapKey('<leader>ca', vim.lsp.buf.code_action)
