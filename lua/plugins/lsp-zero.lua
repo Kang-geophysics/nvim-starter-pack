@@ -35,9 +35,7 @@ return {
     config = function()
       -- This is where all the LSP shenanigans will live
       local lsp_zero = require('lsp-zero')
-      local lspconfig = require('lspconfig')
       lsp_zero.extend_lspconfig()
-      lspconfig.lua_ls.setup({})
       --- if you want to know more about lsp-zero and mason.nvim
       --- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
       lsp_zero.on_attach(function(client, bufnr)
@@ -48,6 +46,10 @@ return {
           preserve_mappings = false
         })
       end)
+      -- LSP config 
+      local lspconfig = require('lspconfig')
+      lspconfig.lua_ls.setup({})
+      -- Ensure LSP config package
       require('mason-lspconfig').setup({
         ensure_installed = {},
         handlers = {
