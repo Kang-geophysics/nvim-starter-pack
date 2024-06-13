@@ -1,4 +1,7 @@
 local mapKey = require("utils/keyMapper").mapKey -- Load helper function
+-- Open Terminal
+mapKey('<leader>ts', ':sp|term<cr><C-w>R')
+mapKey('<leader>tv', ':vs|term<cr><C-w>r')
 
 -- Neotree toggle
 mapKey('<leader>e', ':Neotree toggle<cr>') -- space + e: open Neotree
