@@ -1,24 +1,24 @@
 local mapKey = require("utils/keyMapper").mapKey -- Load helper function
 -- Open Terminal
-mapKey('<leader>ts', ':sp|term<cr><C-w>R')
-mapKey('<leader>tv', ':vs|term<cr><C-w>r')
+mapKey('<C-s>t', ':sp|term<cr><C-w>R7<C-w>-') -- Show terminal
 
 -- Neotree toggle
-mapKey('<leader>e', ':Neotree toggle<cr>') -- space + e: open Neotree
+mapKey('<leader>e', ':Neotree toggle<cr>') -- Space + e: open Neotree
 
--- Telescope
 -- pane navigation
 mapKey('<C-h>', '<C-w>h') -- Left
 mapKey('<C-j>', '<C-w>j') -- Down
 mapKey('<C-k>', '<C-w>k') -- Up
 mapKey('<C-l>', '<C-w>l') -- Right
+mapKey('<C-left>',':bn<CR>') -- Navigate next buffer
+mapKey('<C-right>',':bp<CR>') -- Navigate previous buffer
 
 -- clear search hl
 mapKey('<leader>h', ':nohlsearch<CR>')
 
 -- indent
-mapKey('<C-p>', '<gv', 'v') -- indent right
-mapKey('<C-]>', '>gv', 'v') -- indent left
+mapKey('<C-d>', '<gv', 'v') -- Indent left, <C-d>  in insert
+mapKey('<C-t>', '>gv', 'v') -- Indent right, <C-t>  in insert
 
 -- Mapping for LSP configuration
 -- Auto formatting

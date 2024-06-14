@@ -63,6 +63,8 @@ nvim
 
 - `telescope`
     </br>[Find, Filter, Preview, Pick for Neovim](https://github.com/nvim-telescope/telescope.nvim)
+    </br> To use telescope well, you must have a program called `ripgrep` installed. `ripgrep` can be installed via the following link.
+    [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
 
 - `markdown-preview`
     </br>[Markdown Preview for Neovim](https://github.com/iamcco/markdown-preview.nvim)
@@ -73,6 +75,9 @@ nvim
     - Make sure you have **"Nerd Fonts"**
     You can install just clicking `*.ttf` file.
     But I recommend installing as a tff **for all users**. [(Nerd Fonts)](https://www.nerdfonts.com/)
+- LSP like pyright are available through npm. On Windows, you can do this by installing the Node.js program. This can be installed via the following link
+    [Download Node.js](https://nodejs.org/en/download/prebuilt-installer). You can install it through the Package Manager like windget, fnm, Brew or directly using a pre-built installer.
+- For python, I recommend installing pyright, pylsp, isort, black and mypy through Mason.
 
 ## Review
 - Same behavior as `VIM`
