@@ -87,7 +87,9 @@ nvim
     - The wide world of customization opens up a whole new world for those who want to customize their text editor.
 - Compatibility with Windows
     - Lint or LSP for `nvim-cmp` requires `npm`, which is the package manager for Node js.
+- I've relied on the work of many people, and I'm very grateful for their help.
 
 ## Reference
 - [Neovim-starter](https://github.com/moong00n/neovim-starter)
 - [lsp-zero.nvim introduction](https://lsp-zero.netlify.app/v3.x/introduction.html)
+- [Dash board theme](https://github.com/goolord/alpha-nvim/discussions/16#discussioncomment-8419966)
