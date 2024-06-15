@@ -1,7 +1,7 @@
 local mapKey = require("utils/keyMapper").mapKey -- Load helper function
 -- Open Terminal
 mapKey('<C-s>t', ':sp|term<cr><C-w>R7<C-w>-') -- Show terminal
-mapKey('<Esc>','<C-\\><C-n>','t') -- Exit terminal
+mapKey('<Esc>','<C-\\><C-n>','t') -- Escape terminal
 
 -- Neotree toggle
 mapKey('<leader>e', ':Neotree toggle<cr>') -- Space + e: open Neotree
