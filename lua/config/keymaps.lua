@@ -1,10 +1,14 @@
 local mapKey = require("utils/keyMapper").mapKey -- Load helper function
 -- Open Terminal
-mapKey('<C-s>t', ':sp|term<cr><C-w>R7<C-w>-') -- Show terminal
+mapKey('<C-s>t', ':sp|term<CR><C-w>R7<C-w>-') -- Show terminal
 mapKey('<Esc>','<C-\\><C-n>','t') -- Escape terminal
 
+-- Toggle relative number line
+mapKey('<leader>r',':set rnu <CR>')
+mapKey('<leader>n',':set nornu <CR>')
+
 -- Neotree toggle
-mapKey('<leader>e', ':Neotree toggle<cr>') -- Space + e: open Neotree
+mapKey('<leader>e', ':Neotree toggle<CR>') -- Space + e: open Neotree
 
 -- pane navigation
 mapKey('<C-h>', '<C-w>h') -- Left
