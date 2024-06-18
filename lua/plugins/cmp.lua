@@ -14,6 +14,7 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
       "rafamadriz/friendly-snippets",
     },
     config = function()
@@ -36,9 +37,10 @@ return {
         mapping = cmp.mapping.preset.insert({
           ["<C-u>"] = cmp.mapping.scroll_docs(-4),
           ["<C-d>"] = cmp.mapping.scroll_docs(4),
-          ["<C-Space>"] = cmp.mapping.complete(),
-          ["<leader>e"] = cmp.mapping.abort(),
-          -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+          ["<C-k>"] = cmp.mapping.select_prev_item(),
+          ["<C-j>"] = cmp.mapping.select_next_item(),
+          ["<C-Space>"] = cmp.mapping.complete(), -- Show completion suggestions
+          ["<C-e>"] = cmp.mapping.abort(),
           ["<CR>"] = cmp.mapping.confirm({ select = true }), -- <CR>:Carriage return  (Enter Key)
         }),
         -- autocompletion sources
@@ -47,6 +49,22 @@ return {
           { name = "buffer",  max_item_count = 5 }, -- text within current buffer
           { name = "path",    max_item_count = 3 }, -- file system paths
           { name = "luasnip", max_item_count = 3 }, -- snippets
+        }),
+      })
+      -- autocompletion for cmdline
+      cmp.setup.cmdline({ "/", "?" }, {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = "buffer" },
+        },
+      })
+      -- autocompletion for cmdline
+      cmp.setup.cmdline({ ":" }, {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = "buffer" },
+          { name = "path" },
+          { name = "cmdline" },
         }),
       })
     end,
