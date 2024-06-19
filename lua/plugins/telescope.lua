@@ -27,5 +27,12 @@ return {
       })
       require("telescope").load_extension("ui-select")
     end
+  },
+  {
+      "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      mapKeys("<space>fb", ":Telescope file_browser<CR>")
+      end
   }
 }
