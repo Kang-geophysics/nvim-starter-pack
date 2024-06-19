@@ -60,6 +60,9 @@ nvim
 - `treesitter`
     - [Provide the syntax highlight for Neovim](https://github.com/nvim-treesitter/nvim-treesitter)
 
+- `noice`
+    - [Provide messages,cmdline and the popupmenu for Neovim](https://github.com/folke/noice.nvim)
+
 - `LSP Zero`:   
     - [Collection of LSP packages with lazy](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/lazy-loading-with-lazy-nvim.md)
 > `lsp-zero` is the collection of LSP packages, which is analyzing your code to tell you what to do.
