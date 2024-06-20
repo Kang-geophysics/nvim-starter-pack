@@ -39,3 +39,12 @@ mapKey('<leader>ca', vim.lsp.buf.code_action)
 
 -- Noice
 mapKey('<leader>n',":NoiceDismiss<CR>")
+
+-- Markdown
+mapKey('<leader>mr',':RenderMarkdownToggle<CR>')
+
+-- Obsidian
+mapKey('<C-o>n',":ObsidianNew<CR>") -- Create a new note
+mapKey('<C-o>q',":ObsidianQuickSwitch<CR>") -- Quick Switch
+mapKey('<C-o>s',":ObsidianSearch<CR>") -- Quick Search
+mapKey('<C-o>k',":lua require('obsidian').util.toggle_checkbox()<CR>") -- Toggle checkbox
