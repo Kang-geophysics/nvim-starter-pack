@@ -40,7 +40,7 @@ return {
           ["<C-b>"] = cmp.mapping.select_prev_item(),
           ["<C-f>"] = cmp.mapping.select_next_item(),
           ["<C-s>"] = cmp.mapping.complete(), -- Show completion suggestions
-          ["<C-e>"] = cmp.mapping.abort(),
+          ["<leader>e"] = cmp.mapping.abort(),
           ["<CR>"] = cmp.mapping.confirm({ select = true }), -- <CR>:Carriage return  (Enter Key)
         }),
         sources = cmp.config.sources({
