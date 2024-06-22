@@ -47,6 +47,10 @@ nvim
 - `markdown`
     - [Markdown Viewer for Neovim](https://github.com/MeanderingProgrammer/markdown.nvim?tab=readme-ov-file#setup)
 
+- `obsidian`
+    - [Obsidian plugin for Neovim](https://github.com/epwalsh/obsidian.nvim)
+    - Before you start this plugin, please set the default vaults for obsidian.
+
 - `lualine`
     - [Statusline plugin for Neovim](https://github.com/nvim-lualine/lualine.nvim)
 
@@ -70,10 +74,17 @@ nvim
 >    - Neovim - LSPconfig (nvim-lspconfig): Bridges Neovim with LSPconfig  
 >    - Mason - LSPconfig (mason-lspconfig): Bridges Mason with LSPconfig
 >    - Mason (mason): LSP pacakge manager for Neovim 
->       - Language Server Protocol (LSP): 
+>       - Language Server Protocol (LSP):
+>           - `lua-language-server`
+>           - `markdown-oxide`
+>           - `pyright`
+>           - `fortls`
 >       - Debug Adapter Protocol (DAP): 
+>           - `debugpy`
 >       - Linter: Check the code and provide hints on how to correct the detected problems. 
 >       - Formatter: Provide uniform coding style
+>           - `stylua`
+>           - `fprettify`
 >    - Luasnip
 
 - `cmp`

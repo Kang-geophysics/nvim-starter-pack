@@ -3,7 +3,7 @@ return {
   event = "VimEnter", -- load plugin after all configuration is set
   dependencies = {
     "nvim-tree/nvim-web-devicons",
-    "nvim-lua/plenary.nvim"
+    "nvim-lua/plenary.nvim",
   },
 
   config = function()

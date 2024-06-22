@@ -39,7 +39,7 @@ return {
           ["<C-d>"] = cmp.mapping.scroll_docs(4),
           ["<C-b>"] = cmp.mapping.select_prev_item(),
           ["<C-f>"] = cmp.mapping.select_next_item(),
-          ["<C-s>"] = cmp.mapping.complete(), -- Show completion suggestions
+          ["<C-s>"] = cmp.mapping.complete(),                -- Show completion suggestions
           ["<leader>e"] = cmp.mapping.abort(),
           ["<CR>"] = cmp.mapping.confirm({ select = true }), -- <CR>:Carriage return  (Enter Key)
         }),
@@ -51,7 +51,7 @@ return {
         }),
       })
       -- This function is deactivated because it is duplicated with one of noice.
-      --[[ -- autocompletion for search patterns ("/","?") 
+      --[[ -- autocompletion for search patterns ("/","?")
       cmp.setup.cmdline({ "/", "?" }, {
         mapping = cmp.mapping.preset.cmdline(),
         sources = {

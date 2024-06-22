@@ -5,8 +5,8 @@
 return {
   -- lsp-zero
   {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v3.x',
+    "VonHeikemen/lsp-zero.nvim",
+    branch = "v3.x",
     lazy = true,
     config = false,
     init = function()
@@ -17,24 +17,24 @@ return {
   },
   -- Mason
   {
-    'williamboman/mason.nvim',
+    "williamboman/mason.nvim",
     lazy = false,
     config = function()
-      require('mason').setup()
-    end
+      require("mason").setup()
+    end,
   },
   -- nvim-lspconfig/mason-lspconfig
   {
-    'neovim/nvim-lspconfig',
-    cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
-    event = { 'BufReadPre', 'BufNewFile' },
+    "neovim/nvim-lspconfig",
+    cmd = { "LspInfo", "LspInstall", "LspStart" },
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'williamboman/mason-lspconfig.nvim' },
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "williamboman/mason-lspconfig.nvim" },
     },
     config = function()
       -- This is where all the LSP shenanigans will live
-      local lsp_zero = require('lsp-zero')
+      local lsp_zero = require("lsp-zero")
       lsp_zero.extend_lspconfig()
       --- if you want to know more about lsp-zero and mason.nvim
       --- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
@@ -43,29 +43,29 @@ return {
         -- to learn the available actions
         lsp_zero.default_keymaps({
           buffer = bufnr,
-          preserve_mappings = false
+          preserve_mappings = false,
         })
       end)
-      -- LSP config 
-      local lspconfig = require('lspconfig')
+      -- LSP config
+      local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
       -- Ensure LSP config package
-      require('mason-lspconfig').setup({
-        ensure_installed = {},
+      require("mason-lspconfig").setup({
+        ensure_installed = {"lua_ls"},
         handlers = {
           -- this first function is the "default handler"
           -- it applies to every language server without a "custom handler"
           function(server_name)
-            require('lspconfig')[server_name].setup({})
+            require("lspconfig")[server_name].setup({})
           end,
           -- this is the "custom handler" for `lua_ls`
           lua_ls = function()
             -- (Optional) Configure lua language server for neovim
             local lua_opts = lsp_zero.nvim_lua_ls()
-            require('lspconfig').lua_ls.setup(lua_opts)
+            require("lspconfig").lua_ls.setup(lua_opts)
           end,
-        }
+        },
       })
-    end
-  }
+    end,
+  },
 }

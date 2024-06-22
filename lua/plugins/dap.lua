@@ -4,7 +4,7 @@ return {
   dependencies = {
     "rcarriga/nvim-dap-ui", -- open windows for debugger
     "nvim-neotest/nvim-nio",
-    "mfussenegger/nvim-dap-python"
+    "mfussenegger/nvim-dap-python",
   },
   config = function()
     local dap = require("dap")
@@ -25,7 +25,7 @@ return {
     -- python congifurations
     require("dap-python").setup("python")
     -- Key mapping
-    vim.keymap.set('n', '<leader>db', dap.toggle_breakpoint, {})
-    vim.keymap.set('n', '<leader>ds', dap.continue, {}) -- start debugging
-  end
+    vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
+    vim.keymap.set("n", "<leader>ds", dap.continue, {}) -- start debugging
+  end,
 }
