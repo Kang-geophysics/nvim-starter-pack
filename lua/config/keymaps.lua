@@ -10,7 +10,7 @@ mapKey("<leader>n", ":set nornu <CR>")
 -- Neotree toggle
 mapKey("<leader>e", ":Neotree toggle<CR>") -- Space + e: open Neotree
 
--- pane navigation
+-- Pane navigation
 mapKey("<C-h>", "<C-w>h")      -- Left
 mapKey("<C-j>", "<C-w>j")      -- Down
 mapKey("<C-k>", "<C-w>k")      -- Up
@@ -18,10 +18,14 @@ mapKey("<C-l>", "<C-w>l")      -- Right
 mapKey("<C-left>", ":bn<CR>")  -- Navigate next buffer
 mapKey("<C-right>", ":bp<CR>") -- Navigate previous buffer
 
--- clear search hl
+-- Clear search hl
 mapKey("<leader>h", ":nohlsearch<CR>")
 
--- indent
+-- Increment and decrement of numbers
+mapKey("<leader>+","g<C-a>","v") -- Increase
+mapKey("<leader>-","g<C-x>","v") -- Decrease
+
+-- Indent
 mapKey("<C-d>", "<gv", "v") -- Indent left, <C-d>  in insert
 mapKey("<C-t>", ">gv", "v") -- Indent right, <C-t>  in insert
 
