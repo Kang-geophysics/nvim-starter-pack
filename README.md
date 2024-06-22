@@ -78,6 +78,7 @@ nvim
 >           - `lua-language-server`
 >           - `markdown-oxide`
 >           - `pyright`
+>           - `ruff`
 >           - `fortls`
 >       - Debug Adapter Protocol (DAP): 
 >           - `debugpy`
