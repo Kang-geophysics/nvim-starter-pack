@@ -55,3 +55,4 @@ mapKey("<C-o>k", ":lua require('obsidian').util.toggle_checkbox()<CR>") -- Toggl
 
 -- Lazy Git
 mapKey("<leader>lg",":LazyGit<CR>")
+mapKey("[","<Esc>","t")
