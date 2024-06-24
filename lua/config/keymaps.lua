@@ -52,3 +52,6 @@ mapKey("<C-o>n", ":ObsidianNew<CR>")                                    -- Creat
 mapKey("<C-o>q", ":ObsidianQuickSwitch<CR>")                            -- Quick Switch
 mapKey("<C-o>s", ":ObsidianSearch<CR>")                                 -- Quick Search
 mapKey("<C-o>k", ":lua require('obsidian').util.toggle_checkbox()<CR>") -- Toggle checkbox
+
+-- Lazy Git
+mapKey("<leader>lg",":LazyGit<CR>")
