@@ -1,7 +1,7 @@
 local mapKey = require("utils/keyMapper").mapKey -- Load helper function
 -- Open Terminal
 mapKey("<C-s>t", ":sp|term<CR><C-w>R7<C-w>-")    -- Show terminal
-mapKey("<Esc>", "<C-\\><C-n>", "t")              -- Escape terminal
+mapKey("<C-e>", "<C-\\><C-n>", "t")              -- Escape terminal
 
 -- Toggle relative number line
 mapKey("<leader>r", ":set rnu <CR>")
@@ -55,4 +55,3 @@ mapKey("<C-o>k", ":lua require('obsidian').util.toggle_checkbox()<CR>") -- Toggl
 
 -- Lazy Git
 mapKey("<leader>lg",":LazyGit<CR>")
-mapKey("[","<Esc>","t")
