@@ -5,7 +5,7 @@ mapKey("<C-e>", "<C-\\><C-n>", "t")              -- Escape terminal
 
 -- Toggle relative number line
 mapKey("<leader>r", ":set rnu <CR>")
-mapKey("<leader>n", ":set nornu <CR>")
+mapKey("<leader>nr", ":set nornu <CR>")
 
 -- Neotree toggle
 mapKey("<leader>e", ":Neotree toggle<CR>") -- Space + e: open Neotree
@@ -42,7 +42,7 @@ mapKey("gD", vim.lsp.buf.declaration)
 mapKey("<leader>ca", vim.lsp.buf.code_action)
 
 -- Noice
-mapKey("<leader>n", ":NoiceDismiss<CR>")
+mapKey("<leader>nd", ":NoiceDismiss<CR>")
 
 -- Markdown
 mapKey("<leader>mr", ":RenderMarkdownToggle<CR>")
