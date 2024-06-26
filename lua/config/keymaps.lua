@@ -7,6 +7,10 @@ mapKey("<C-e>", "<C-\\><C-n>", "t")              -- Escape terminal
 mapKey("<leader>r", ":set rnu <CR>")
 mapKey("<leader>nr", ":set nornu <CR>")
 
+-- Move line
+mapKey("<A-j>", ":move +1<CR>")
+mapKey("<A-k>", ":move -2<CR>")
+
 -- Neotree toggle
 mapKey("<leader>e", ":Neotree toggle<CR>") -- Space + e: open Neotree
 
