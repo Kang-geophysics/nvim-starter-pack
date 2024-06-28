@@ -51,7 +51,7 @@ return {
       lspconfig.lua_ls.setup({})
       -- Ensure LSP config package
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls"},
+        ensure_installed = { "lua_ls", "markdown_oxide" },
         handlers = {
           -- this first function is the "default handler"
           -- it applies to every language server without a "custom handler"

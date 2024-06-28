@@ -23,11 +23,11 @@ mapKey("<C-left>", ":bn<CR>")  -- Navigate next buffer
 mapKey("<C-right>", ":bp<CR>") -- Navigate previous buffer
 
 -- Clear search hl
-mapKey("<leader>h", ":nohlsearch<CR>")
+mapKey("<leader>nh", ":nohlsearch<CR>")
 
 -- Increment and decrement of numbers
-mapKey("<leader>+","g<C-a>","v") -- Increase
-mapKey("<leader>-","g<C-x>","v") -- Decrease
+mapKey("<leader>+", "g<C-a>", "v") -- Increase
+mapKey("<leader>-", "g<C-x>", "v") -- Decrease
 
 -- Indent
 mapKey("<C-d>", "<gv", "v") -- Indent left, <C-d>  in insert
@@ -46,7 +46,7 @@ mapKey("gD", vim.lsp.buf.declaration)
 mapKey("<leader>ca", vim.lsp.buf.code_action)
 
 -- Noice
-mapKey("<leader>nd", ":NoiceDismiss<CR>")
+mapKey("<leader>nn", ":NoiceDismiss<CR>")
 
 -- Markdown
 mapKey("<leader>mr", ":RenderMarkdownToggle<CR>")
@@ -58,4 +58,4 @@ mapKey("<C-o>s", ":ObsidianSearch<CR>")                                 -- Quick
 mapKey("<C-o>k", ":lua require('obsidian').util.toggle_checkbox()<CR>") -- Toggle checkbox
 
 -- Lazy Git
-mapKey("<leader>lg",":LazyGit<CR>")
+mapKey("<leader>lg", ":LazyGit<CR>")
