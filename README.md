@@ -1,3 +1,6 @@
+# Introductions
+I made this repository to study how to use Neovim.
+
 # Neovim
 - Vim is a text editor tool that supports advanced functions through lots of plugins.
 - The shortcut keys are the same as Vim, but can be customized through key mappings.
