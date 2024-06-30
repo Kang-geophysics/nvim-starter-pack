@@ -19,8 +19,8 @@ mapKey("<C-h>", "<C-w>h")      -- Left
 mapKey("<C-j>", "<C-w>j")      -- Down
 mapKey("<C-k>", "<C-w>k")      -- Up
 mapKey("<C-l>", "<C-w>l")      -- Right
-mapKey("<C-left>", ":bn<CR>")  -- Navigate next buffer
-mapKey("<C-right>", ":bp<CR>") -- Navigate previous buffer
+mapKey("<C-right>", ":bn<CR>")  -- Navigate next buffer
+mapKey("<C-left>", ":bp<CR>") -- Navigate previous buffer
 
 -- Clear search hl
 mapKey("<leader>nh", ":nohlsearch<CR>")
