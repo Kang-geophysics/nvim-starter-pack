@@ -76,6 +76,12 @@ nvim
 - `telescope`
     - [Find, Filter, Preview, Pick for Neovim](https://github.com/nvim-telescope/telescope.nvim)
     - To use telescope well, you should have a program called [`ripgrep`](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
+    - Major functions
+        - Find Files
+        - Find strings (Live grep)
+        - Find words under cursor (Find word)
+        - Find buffers (buffers)
+        - Find helper (Help) 
 
 - `treesitter`
     - [Provide the syntax highlight for Neovim](https://github.com/nvim-treesitter/nvim-treesitter)
