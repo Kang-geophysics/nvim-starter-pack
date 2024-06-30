@@ -30,8 +30,9 @@ mapKey("<leader>+", "g<C-a>", "v") -- Increase
 mapKey("<leader>-", "g<C-x>", "v") -- Decrease
 
 -- Indent
-mapKey("<C-d>", "<<") -- Indent left, <C-d>  in insert
-mapKey("<C-t>", ">>") -- Indent right, <C-t>  in insert
+mapKey("<leader>d", "<<") -- Indent left, <C-d>  in insert,
+                          -- <C-d> in normal mode = move screen. 
+mapKey("<leader>t", ">>") -- Indent right, <C-t>  in insert
 
 -- Mapping for LSP configuration
 -- Auto formatting

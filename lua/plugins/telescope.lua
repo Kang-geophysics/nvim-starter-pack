@@ -7,11 +7,11 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       local builtin = require("telescope.builtin")
-      mapKeys("<leader>tf", builtin.find_files)   -- Find file in cwd.
-      mapKeys("<leader>tg", builtin.live_grep)    -- Find string in cwd.
-      mapKeys("<leader>t*", builtin.grep_string)  -- Find string under cursor in cwd
-      mapKeys("<leader>tb", builtin.buffers)      -- List of Recent.
-      mapKeys("<leader>th", builtin.help_tags)
+      mapKeys("<leader>ff", builtin.find_files)   -- Find file in cwd.
+      mapKeys("<leader>fg", builtin.live_grep)    -- Find string in cwd.
+      mapKeys("<leader>f*", builtin.grep_string)  -- Find string under cursor in cwd
+      mapKeys("<leader>fb", builtin.buffers)      -- List of Recent.
+      mapKeys("<leader>fh", builtin.help_tags)
     end,
   },
   {
@@ -31,7 +31,7 @@ return {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function()
-      mapKeys("<space>fb", ":Telescope file_browser<CR>") -- File borwer.
+      mapKeys("<leader>f", ":Telescope file_browser<CR>") -- File borwer.
     end,
   },
 }

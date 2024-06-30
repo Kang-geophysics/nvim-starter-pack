@@ -68,7 +68,7 @@ nvim
     - Basically, it can handle three sources. One is a "file system", another is a "buffers", which is a list of recently used files, and the other is a "git status". 
     - The "file system" gives you the same functionality as Windows Explorer.
     - The "buffers" allows you to view and move recently used and opened files at a glance.
-        - If you want to move quickly between buffers, I recommend setting keymp ":bn\<CR>" and ":bp\<CR>" to something.
+        - If you want to move quickly between buffers, I recommend setting keymp ":bp\<CR>" and ":bn\<CR>" to something.
         - In my case, I set both to  "\<C-left>" and "\<C-right>" respectively.
     - The "git-status" provides the convenience of performing  "git add/git commit/git push/git rever/ etc."
         - If you need basit git functionality, you don't need to install any other plugins for neovim.
