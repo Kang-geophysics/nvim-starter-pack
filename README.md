@@ -82,6 +82,12 @@ nvim
         - Find words under cursor (Find word)
         - Find buffers (buffers)
         - Find helper (Help) 
+    - Support Quickfix
+        - You don't need to memorize all positions you found.
+        - You can select a list of position in "Live grep" using "Tab"
+        - If you choose, "+" mark will be annotated in front of selected list.
+        - `<Ctl-q>`: Add all itmes to Quickfixlist
+        - `<Alt-q>`: Add selected items to Quickfixlist
 
 - `treesitter`
     - [Provide the syntax highlight for Neovim](https://github.com/nvim-treesitter/nvim-treesitter)
