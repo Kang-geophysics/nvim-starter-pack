@@ -119,7 +119,13 @@ nvim
 
 - `none-ls`
     - [Inject Diagnostics/Code actions/Formatting/Hover/Completion to lsp](https://github.com/nvimtools/none-ls.nvim)
-    - Linter like `mypy` or formatter like black needs to be set up to use`lsp.buf.*`. This repository provides this setups. 
+    - `Lua`
+        - `stylua`
+    - `Python` 
+        - Linter like `mypy` or formatter like black needs to be set up to use`lsp.buf.*`. This repository provides this setups. 
+    - `Fortran`
+        - `findent`
+        - `fprettify`
 
 - `dap`
     - [Debug Adapter Protocol](https://github.com/mfussenegger/nvim-dap)
