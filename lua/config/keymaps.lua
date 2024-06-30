@@ -19,8 +19,8 @@ mapKey("<C-h>", "<C-w>h")      -- Left
 mapKey("<C-j>", "<C-w>j")      -- Down
 mapKey("<C-k>", "<C-w>k")      -- Up
 mapKey("<C-l>", "<C-w>l")      -- Right
-mapKey("<C-right>", ":bn<CR>")  -- Navigate next buffer
-mapKey("<C-left>", ":bp<CR>") -- Navigate previous buffer
+mapKey("<C-right>", ":bn<CR>") -- Navigate next buffer
+mapKey("<C-left>",  ":bp<CR>") -- Navigate previous buffer
 
 -- Clear search hl
 mapKey("<leader>nh", ":nohlsearch<CR>")
@@ -30,8 +30,8 @@ mapKey("<leader>+", "g<C-a>", "v") -- Increase
 mapKey("<leader>-", "g<C-x>", "v") -- Decrease
 
 -- Indent
-mapKey("<C-d>", "<gv", "v") -- Indent left, <C-d>  in insert
-mapKey("<C-t>", ">gv", "v") -- Indent right, <C-t>  in insert
+mapKey("<C-d>", "<<") -- Indent left, <C-d>  in insert
+mapKey("<C-t>", ">>") -- Indent right, <C-t>  in insert
 
 -- Mapping for LSP configuration
 -- Auto formatting

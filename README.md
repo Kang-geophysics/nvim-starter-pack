@@ -44,8 +44,13 @@ nvim
 
 - `comment`
     - [Comment for Neovim](https://github.com/numToStr/Comment.nvim)
-    - gcc: Toggles current line comment
-    - {count} gcc: Toggles given the number of lines comment
+    - Normal mode
+        - gcc: Toggles current line comment
+        - {count} gcc: Toggles given the number of lines comment
+        - gcb: Toggle current block comment
+    - Visual mode
+        - gc: Toggle current line comment
+        - gb: Toggle current block comment
 
 - `markdown`
     - [Markdown Viewer for Neovim](https://github.com/MeanderingProgrammer/markdown.nvim?tab=readme-ov-file#setup)
@@ -53,6 +58,7 @@ nvim
 - `obsidian`
     - [Obsidian plugin for Neovim](https://github.com/epwalsh/obsidian.nvim)
     - Before you start this plugin, please set the default vaults for obsidian.
+        - In my case, I made `~/vaults/obsi/` for default directory.
 
 - `lualine`
     - [Statusline plugin for Neovim](https://github.com/nvim-lualine/lualine.nvim)
