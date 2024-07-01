@@ -50,8 +50,7 @@ return {
           { name = "luasnip", max_item_count = 3 }, -- snippets (date, etc.)
         }),
       })
-      -- This function is deactivated because it is duplicated with one of noice.
-      --[[ -- autocompletion for search patterns ("/","?")
+      -- autocompletion for search patterns ("/","?")
       cmp.setup.cmdline({ "/", "?" }, {
         mapping = cmp.mapping.preset.cmdline(),
         sources = {
@@ -59,13 +58,13 @@ return {
         },
       })
       -- autocompletion for Ex command (":")
-      cmp.setup.cmdline({ ":" }, {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources(
-          {{ name = "path" }},
-          {{ name = "cmdline" }}
-        ),
-      }) ]]
+      -- cmp.setup.cmdline({ ":" }, {
+      --   mapping = cmp.mapping.preset.cmdline(),
+      --   sources = cmp.config.sources(
+      --     {{ name = "path" }},
+      --     {{ name = "cmdline" }}
+      --   ),
+      -- })
     end,
   },
 }
