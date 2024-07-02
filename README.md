@@ -182,12 +182,30 @@ nvim
             - Also see `tabdo`,`argdo`,`windo`,`cdo`,`ldo`
 
 - Quickfix list
-    - It is list to save the location of searching pattern.
-    - `:vim[grep] {pattern} {file}` add lists to quickfix list. 
-        - `:vim {pattern} /usr/**`: find `{pattern}` in directory `/usr/` and add locations to quickfix list.
+    - It is list to save the location of error message (or searching pattern).
+    - `:vim[grep] {pattern} {file}` adds lists to quickfix list. 
+        - `:vim {pattern} /usr/**`: finds `{pattern}` in directory `/usr/` and add locations to quickfix list.
     - `:copen` opens a window to show the current list of searching patterns.
-    - `:cn[ext]`,`:cp[revious]`, `:cfir[st]`, `:cla[st]` are used to navigae files in the quickfix list.
-    - `:cdo s/foo/boo` are used to substitute words `foo` to `boo` in files of quickfilx list
+    - `:cn[ext]`,`:cp[revious]`, `:cfir[st]`, `:cla[st]` are used to navigate files in the quickfix list.
+    - `:cc N` is used to navigate Nth item in the quickfix list
+    - `:col[der]` or `:cnew[er]` go to other quickfix list.
+        - Data structure of quickfix is "Stack" like "git stash" or "python list". These lists are stacked in the order they are created.
+            - Last In First Out (LIFO) is chacrateristic of "Stack".
+        - Vim retain up to 10 quickfix lists in a session.
+    - `:cdo s/foo/boo` is used to substitute words `foo` to `boo` in files of quickfilx list
+
+- Location list
+    - It create a location list instead of quickfix list.
+    - This behaves like quickfix list. But it can be created as many panes as are enalbled in a session. But quickfix list can be created as one.
+        For example, if you have 3 activated panes, you can create 3 `location list`. But you can creat only one in a session. 
+    - `:lv[imgrep] {pattern} {file}` add lists to to location list as quickfix list behaves.
+    - `:lopen` opens a window to show the current list of searching patters.
+    - `:lne[xt]`, `:lprev`, `:lfirst`, `:llast` are used navigate files in the location list
+    - `:ll N` is used to navigate Nth item in the location list
+    - `:lol[der]` or `:lnew[er]` go to other location list.
+        - Data structure: "Stack"
+        - Vim retain up to 10 location lists per window (or pane)
+    - `:ldo` behaves like `:cdo`
 
 - Registers
     - Coming soon.
