@@ -94,6 +94,7 @@ nvim
 
 - `noice`
     - [Provide messages,cmdline and the popupmenu for Neovim](https://github.com/folke/noice.nvim)
+    - "Noice" is good plugin but I prefer not to use it. So I remvoed it.
 
 - `git-stuff`
     - [Git wrapper for Neovim](https://github.com/tpope/vim-fugitive)
@@ -142,10 +143,54 @@ nvim
     - Make sure you have **"Nerd Fonts"**
     You can install just clicking `*.ttf` file.
     But I recommend installing as a tff **for all users**. [(Nerd Fonts)](https://www.nerdfonts.com/)
-- LSP like pyright are available through npm. On Windows, you can do this by installing the Node.js program. This can be installed via the following link
+- LSP 
+    - LSP like pyright are available through npm. On Windows, you can do this by installing the Node.js program. This can be installed via the following link
     [Download Node.js](https://nodejs.org/en/download/prebuilt-installer). You can install it through the Package Manager like windget, fnm, Brew or directly using a pre-built installer.
-- For python, I recommend installing `pyright (LSP)` and `ruff(LSP+Linter+Formatter)` through Mason.
+    - For python, I recommend installing `pyright (LSP)` and `ruff(LSP+Linter+Formatter)` through Mason.
+- Buffers
+    - Buffers are everything you've loaded before (in-memory texts).
+    - It's like a pile of books on your desk.
+    - Each buffer has a unique number. Thus you can always go to a specific buffer ":bufferN"
+    - If you try to quit a modified file without saving, you will get anrror message. Vim will pull the file from the buffer into the current window.
+    - Buffers has 3 states.
+        - Active  : It is displayed in the current window.
+        - Hiddne  : It is not displayed in the current window, and was previously loaded. 
+        - Inactive: It is not displayed in the current window, and was previously loaded but closed. 
+    - You can check buffers through command ":buffers, :ls, :files"
+        - `:buffers[!] [flags]` / `:ls[!] [flags]` / `:files[!] [flags]`
+        - When "!" is included command, it will show not only ordinary buffers but also unlisted buffers which is a kind of help documents or neotree systems or quickfix list.
+            -`:buffers!`
+        - `:buffers` shows list in buffers.
+            - Buffer No. / Indicator / Path / Line No. of cursor
+            - Each buffer has a unique number. Thus you can alwasy call each buffer with 
+                - `:buffer N` or `:N<C-^>`
+            - Indicator
+                - `u` (unlisted buffer)
+                - `%` (current buffer)
+                - `#` (recently loaded buffer)
+                - `a` (active buffer: loaded and displayed)
+                - `h` (hidden buffer: loaded but invisible)
+                - `+` (modified buffer)
+                - `-` (immutable buffer)
+                - `=` (readonly buffer)
+                - ex)
+                    - 1: %a and 2: a
+                    - buffer 1 is displayed in window and cursor is in it.
+                    - buffer 2 is displayed in window but cursor is not in.
+        - `:bdelete N1 N2` delete a Nth buffer in buffers.
+        - `:bufdo {cmd}` execute {cmd}
+            - Also see `tabdo`,`argdo`,`windo`,`cdo`,`ldo`
 
+- Quickfix list
+    - It is list to save the location of searching pattern.
+    - `:vim[grep] {pattern} {file}` add lists to quickfix list. 
+        - `:vim {pattern} /usr/**`: find `{pattern}` in directory `/usr/` and add locations to quickfix list.
+    - `:copen` opens a window to show the current list of searching patterns.
+    - `:cn[ext]`,`:cp[revious]`, `:cfir[st]`, `:cla[st]` are used to navigae files in the quickfix list.
+    - `:cdo s/foo/boo` are used to substitute words `foo` to `boo` in files of quickfilx list
+
+- Registers
+    - Coming soon.
 ## Review
 - Same behavior as `VIM`
     - If you're a `CLI` user who is familiar with `VIM`, this is great.
