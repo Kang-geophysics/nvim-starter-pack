@@ -54,6 +54,9 @@ nvim
 
 - `markdown`
     - [Markdown Viewer for Neovim](https://github.com/MeanderingProgrammer/markdown.nvim?tab=readme-ov-file#setup)
+    - For Latex,`pylatexenc` and `latex parser` for tree-sitter are required.
+        - `pylatexenc` can be installed with `pip` or `conda`
+        - `latex parser` can be installed with `:TSInstall latex`
 
 - `obsidian`
     - [Obsidian plugin for Neovim](https://github.com/epwalsh/obsidian.nvim)
