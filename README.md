@@ -57,6 +57,8 @@ nvim
     - For Latex,`pylatexenc` and `latex parser` for tree-sitter are required.
         - `pylatexenc` can be installed with `pip` or `conda`
         - `latex parser` can be installed with `:TSInstall latex`
+            - For this, you need `tree-sitter-cli`. If your OS is Windows, you can install `tree-sitter-cli` following command.
+                - `npm install g tree-sitter-cli`
 
 - `obsidian`
     - [Obsidian plugin for Neovim](https://github.com/epwalsh/obsidian.nvim)
