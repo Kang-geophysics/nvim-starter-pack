@@ -2,7 +2,7 @@
 I made this repository to study how to use Neovim.
 
 # Neovim
-- Vim is a text editor tool that supports advanced functions through lots of plugins.
+- Neovim is a text editor tool that supports advanced functions through lots of plugins.
 - The shortcut keys are the same as Vim, but can be customized through key mappings.
 
 ## Nvim Start
@@ -89,7 +89,7 @@ nvim
         - Find helper (Help) 
     - Support Quickfix
         - You don't need to memorize all positions you found.
-        - You can select a list of position in "Live grep" using "Tab"
+        - You can select a list of location in "Live grep" using "Tab"
         - If you choose, "+" mark will be annotated in front of selected list.
         - `<Ctl-q>`: Add all itmes to Quickfixlist
         - `<Alt-q>`: Add selected items to Quickfixlist
@@ -213,7 +213,58 @@ nvim
     - `:ldo` behaves like `:cdo`
 
 - Registers
-    - Coming soon.
+    - The Vim registers are similar to the clipboard.
+    - When you yanked or deleted texts, you can paste them to somewhere.
+    - Vim saves these texts to registers.
+    - There are 10 knds of registers.
+        1. Unnamed register (`""`)
+            - Texts deleted with `d,s,c,x` or copied with `y` are saved here at First.
+        2. Numbered registers (`"0 -"9`)
+            - `"0` is for the last yanked texts.
+            - `"1` is for the last deleted texts more than one line with `d,s,c`. 
+            - `"2 - "9` are the backup place for `"1`. Vim moves `1` into `2`, `2` into `3`, and so forth. 
+        3. Named registers (`"a - "z` or `"A - "Z`)
+            - This registers can be allocated by only user command.
+            - "Macro" will be saved in this registers.
+            - Use lowercase to replace previous contents with new contetns.
+            - Use uppercase to add new contents to previous contents.
+        4. Small delete register (`"-`)
+            - Deleted texts less than one line
+        5. Selection registers (`"+ , "*`) 
+            - Texts copied from external program are saved in this registers.
+            - You can export texts from Vim to external clipboard with `"+y` or `"+d` 
+        6. Read-only registers (`". , ": , "%`)
+            - `".` saves the last inserted text after `Insert Mode` is activated.
+            - `":` saves the last executed command-line.
+            - `"%` saves the name of current buffer (file name).
+        7. Alternate buffer register (`"#`)
+            - This register saves the alternate buffer, which is the last loaded file but not displayed in the window.
+            - "#" is the indicator of the last loaded buffer.
+        8. Search patter register (`"/`)
+            - This register saved the last search pattern.
+        9. Expression register (`"=`)
+            - This register support mathmatical calculation.
+            - `:h expression-syntax` explains various types ofxpressions.
+        10. Black hole register (`"_`)
+            - When you delete or change, Vim automatically save texts into registers. When you don't want to save, Just use this register.
+            - `"_dd` doesn't store anything into register.  
+    - You can clean up the resister `a` with `:let @a=""`
+        - `:call range(0,9)->map('setreg(v:val,"")')` delete registers of `0-9`.
+        - `:call range(0,26)->map('setreg(@z[v:val],"")')` delet registers of `a-x`.
+            - `@z` is a string `a-x`
+
+- Macro
+    - `q{a - z}` in Normal Mode to start recording.
+        - `recroding @a` will be shown. 
+    - `q` in Normal mode to stop recording.
+    - `N@a` execute the macro as `N` times.
+
+- Book Marks
+    - `m{a - z}` : Save book mark at current cursor location.
+    - ` '{a - z}` : Move to line of the book mark.
+    - `` `{a - z}``: Move to the postion of the book mark.
+    - `:delmarks!` : Delete all lowercase marks for the current buffer. 
+
 ## Review
 - Same behavior as `VIM`
     - If you're a `CLI` user who is familiar with `VIM`, this is great.
