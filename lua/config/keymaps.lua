@@ -46,9 +46,6 @@ mapKey("gD", vim.lsp.buf.declaration)
 -- Selects a code action available at the current cursor position.
 mapKey("<leader>ca", vim.lsp.buf.code_action)
 
--- Noice
-mapKey("<leader>nn", ":NoiceDismiss<CR>")
-
 -- Markdown
 mapKey("<leader>mr", ":RenderMarkdownToggle<CR>")
 
