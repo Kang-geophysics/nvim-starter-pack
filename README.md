@@ -8,7 +8,6 @@ I made this repository to study how to use Neovim.
 ## Nvim Start
 ### Install Neovim
 [Home-Neovim](https://neovim.io/)
-
 ```
 # Open tutorial
 :help nvim
@@ -16,6 +15,7 @@ I made this repository to study how to use Neovim.
 # Open Neovim
 nvim
 ```
+- Version: 0.10.1
 
 ## Plugin Manager
 - vim-plugin
@@ -234,7 +234,7 @@ nvim
             - Texts copied from external program are saved in this registers.
             - You can export texts from Vim to external clipboard with `"+y` or `"+d` 
         6. Read-only registers (`". , ": , "%`)
-            - `".` saves the last inserted text after `Insert Mode` is activated.
+            - `".` saves the last inserted texts after `Insert Mode` is activated.
             - `":` saves the last executed command-line.
             - `"%` saves the name of current buffer (file name).
         7. Alternate buffer register (`"#`)
@@ -251,7 +251,7 @@ nvim
     - You can clean up the resister `a` with `:let @a=""`
         - `:call range(0,9)->map('setreg(v:val,"")')` delete registers of `0-9`.
         - `:call range(0,26)->map('setreg(@z[v:val],"")')` delet registers of `a-x`.
-            - `@z` is a string `a-x`
+            - I saved `a-x` to register `z`.
 
 - Macro
     - `q{a - z}` in Normal Mode to start recording.
