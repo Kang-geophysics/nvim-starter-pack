@@ -76,7 +76,7 @@ nvim
         - If you want to move quickly between buffers, I recommend setting keymp ":bp\<CR>" and ":bn\<CR>" to something.
         - In my case, I set both to  "\<C-left>" and "\<C-right>" respectively.
     - The "git-status" provides the convenience of performing  "git add/git commit/git push/git rever/ etc."
-        - If you need basit git functionality, you don't need to install any other plugins for neovim.
+        - If you need basic git functionality, you don't need to install any other plugins for neovim.
 
 - `telescope`
     - [Find, Filter, Preview, Pick for Neovim](https://github.com/nvim-telescope/telescope.nvim)
@@ -107,24 +107,26 @@ nvim
 
 - `LSP Zero`:   
     - [Collection of LSP packages with lazy](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/lazy-loading-with-lazy-nvim.md)
-> `lsp-zero` is the collection of LSP packages, which is analyzing your code to tell you what to do.
-> The collections are as follows:
->    - Neovim - LSPconfig (nvim-lspconfig): Bridges Neovim with LSPconfig  
->    - Mason - LSPconfig (mason-lspconfig): Bridges Mason with LSPconfig
->    - Mason (mason): LSP pacakge manager for Neovim 
->       - Language Server Protocol (LSP):
->           - `lua-language-server`
->           - `markdown-oxide`
->           - `pyright`
->           - `ruff`
->           - `fortls`
->       - Debug Adapter Protocol (DAP): 
->           - `debugpy`
->       - Linter: Check the code and provide hints on how to correct the detected problems. 
->       - Formatter: Provide uniform coding style
->           - `stylua`
->           - `fprettify`
->    - Luasnip
+    - `lsp-zero` is the collection of LSP packages, which is analyzing your code to tell you what to do.
+    - The collections are as follows:
+        - Neovim - LSPconfig (nvim-lspconfig): Bridges Neovim with LSPconfig  
+        - Mason - LSPconfig (mason-lspconfig): Bridges Mason with LSPconfig
+        - Mason (mason): LSP pacakge manager for Neovim 
+            - Language Server Protocol (LSP):
+                - `lua-language-server`
+                - `markdown-oxide`
+                - `pyright`
+                - `ruff`
+                - `fortls`
+        - Debug Adapter Protocol (DAP): 
+            - `debugpy`
+        - Linter: Check the code and provide hints on how to correct the detected problems. 
+        - Formatter: Provide uniform coding style
+            - `stylua`
+            - `fprettify`
+        - Luasnip
+            - [Snippet engine for Neovim](https://github.com/L3MON4D3/LuaSnip)
+            - It is a `snippet engine` written with lua.
 
 - `cmp`
     - [Auto CoMPletion plugin for Neovim](https://github.com/hrsh7th/nvim-cmp)
@@ -145,11 +147,11 @@ nvim
 
 ## Tips
 - Broken fonts and icons
-    - Make sure you have **"Nerd Fonts"**
-    You can install just clicking `*.ttf` file.
-    But I recommend installing as a tff **for all users**. [(Nerd Fonts)](https://www.nerdfonts.com/)
+    - Make sure you have **"Nerd Fonts"** or not.
+    - You can install just by clicking on the `*.ttf` file if your OS is Windows.
+    - I recommend installing it **for all users**. [(Nerd Fonts)](https://www.nerdfonts.com/)
 - LSP 
-    - LSP like pyright are available through npm. On Windows, you can do this by installing the Node.js program. This can be installed via the following link
+    - LSP like pyright are available through npm. On Windows, you can do this by installing the `Node.js` program. This can be installed via the following link
     [Download Node.js](https://nodejs.org/en/download/prebuilt-installer). You can install it through the Package Manager like windget, fnm, Brew or directly using a pre-built installer.
     - For python, I recommend installing `pyright (LSP)` and `ruff(LSP+Linter+Formatter)` through Mason.
 - Buffers
@@ -249,7 +251,7 @@ nvim
             - When you delete or change, Vim automatically save texts into registers. When you don't want to save, Just use this register.
             - `"_dd` doesn't store anything into register.  
     - You can clean up the resister `a` with `:let @a=""`
-        - `:call range(0,9)->map('setreg(v:val,"")')` delete registers of `0-9`.
+        - `:call range(0,9)->jap('setreg(v:val,"")')` delete registers of `0-9`.
         - `:call range(0,26)->map('setreg(@z[v:val],"")')` delet registers of `a-x`.
             - I saved `a-x` to register `z`.
 
