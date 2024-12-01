@@ -91,8 +91,9 @@ nvim
         - You don't need to memorize all positions you found.
         - You can select a list of location in "Live grep" using "Tab"
         - If you choose, "+" mark will be annotated in front of selected list.
-        - `<Ctl-q>`: Add all itmes to Quickfixlist
-        - `<Alt-q>`: Add selected items to Quickfixlist
+        - `<Ctl-q>`: Add all itmes to `Quickfixlist`
+        - `<Alt-q>`: Add selected items to `Quickfixlist` (
+            - Using `:cn` and`:cp`, you can move to another file in `Quickfixlist` you added.
 
 - `treesitter`
     - [Provide the syntax highlight for Neovim](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -144,6 +145,7 @@ nvim
 - `dap`
     - [Debug Adapter Protocol](https://github.com/mfussenegger/nvim-dap)
     - This repository provides python debbuger.
+    - Deleted.
 
 ## Tips
 - Broken fonts and icons
