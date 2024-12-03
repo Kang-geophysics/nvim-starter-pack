@@ -17,6 +17,7 @@ opt.number = true
 -- opt.relativenumbe = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
+opt.cursorline = true
 
 -- etc
 opt.encoding = "UTF-8"
