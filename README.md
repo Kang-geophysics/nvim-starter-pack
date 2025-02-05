@@ -8,7 +8,7 @@ I made this repository to study how to use Neovim.
 ## Nvim Start
 ### Install Neovim
 [Home-Neovim](https://neovim.io/)
-```
+```bash
 # Open tutorial
 :help nvim
 
@@ -59,6 +59,7 @@ nvim
         - `latex parser` can be installed with `:TSInstall latex`
             - For this, you need `tree-sitter-cli`. If your OS is Windows, you can install `tree-sitter-cli` following command.
                 - `npm install g tree-sitter-cli`
+    - [Markdown, HTML, LaTeX, Typst & YAML previewer for Neovim](https://github.com/OXY2DEV/markview.nvim)
 
 - `obsidian`
     - [Obsidian plugin for Neovim](https://github.com/epwalsh/obsidian.nvim)

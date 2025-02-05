@@ -1,13 +1,17 @@
 return {
+  -- {
+  --   "MeanderingProgrammer/markdown.nvim",
+  --   name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
+  --   dependencies = { "nvim-treesitter/nvim-treesitter" },
+  --   config = function()
+  --     require("render-markdown").setup({
+  --       -- https://github.com/MeanderingProgrammer/markdown.nvim?tab=readme-ov-file#setup
+  --     })
+  --   end,
+  -- },
   {
-    "MeanderingProgrammer/markdown.nvim",
-    name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    config = function()
-      require("render-markdown").setup({
-        -- https://github.com/MeanderingProgrammer/markdown.nvim?tab=readme-ov-file#setup
-      })
-    end,
+    "OXY2DEV/markview.nvim",
+    lazy=false
   },
   {
     "epwalsh/obsidian.nvim",
