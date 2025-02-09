@@ -1,7 +1,8 @@
 local mapKey = require("utils/keyMapper").mapKey -- Load helper function
 -- Open Terminal
-mapKey("<C-s>t", ":sp|term<CR><C-w>R7<C-w>-")    -- Show terminal
-mapKey("<C-e>", "<C-\\><C-n>", "t")              -- Escape terminal
+-- mapKey("<C-s>t", ":sp|term<CR><C-w>R7<C-w>-")    -- Show terminal
+-- mapKey("<C-e>", "<C-\\><C-n>", "t")              -- Escape terminal
+mapKey("<leader>z", ":!tmux split-window -v -l 6<CR>")
 
 -- Toggle relative number line
 mapKey("<leader>r", ":set rnu <CR>")
