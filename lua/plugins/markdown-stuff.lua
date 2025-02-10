@@ -2,14 +2,14 @@
 local mapKeys = require("utils.keyMapper").mapKey
 return {
   {
-    "OXY2DEV/markview.nvim",
-    lazy=false,
-    config = function()
-      require("markview.extras.checkboxes").setup();
-      mapKeys("<C-L>", ":Checkbox interactive<CR>")
-    end
-
-  },
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && npm install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+    },
   {
     "epwalsh/obsidian.nvim",
     version = "*", -- recommended, use latest release instead of latest commit
@@ -109,4 +109,13 @@ return {
       })
     end,
   },
+  -- {
+  --   "OXY2DEV/markview.nvim",
+  --   lazy=false,
+  --   config = function()
+  --     require("markview.extras.checkboxes").setup();
+  --     mapKeys("<C-L>", ":Checkbox interactive<CR>")
+  --   end
+  --
+  -- },
 }
