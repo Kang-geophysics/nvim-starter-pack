@@ -1,5 +1,4 @@
 -- plugins/markdown-stuff.lua:
-local mapKeys = require("utils.keyMapper").mapKey
 return {
   {
     "iamcco/markdown-preview.nvim",
@@ -9,7 +8,7 @@ return {
       vim.g.mkdp_filetypes = { "markdown" }
     end,
     ft = { "markdown" },
-    },
+  },
   {
     "epwalsh/obsidian.nvim",
     version = "*", -- recommended, use latest release instead of latest commit
@@ -24,9 +23,13 @@ return {
       require("obsidian").setup({
         workspaces = {
           {
-            name = "Obsi",
+            name = "Wrok",
             path = "~/vaults/obsi",
           },
+          {
+            name = "Projects",
+            path = "~/vaults/proj",
+          }
         },
         notes_subdir = "Inbox",
         new_notes_location = "notes_subdir",
@@ -109,13 +112,4 @@ return {
       })
     end,
   },
-  -- {
-  --   "OXY2DEV/markview.nvim",
-  --   lazy=false,
-  --   config = function()
-  --     require("markview.extras.checkboxes").setup();
-  --     mapKeys("<C-L>", ":Checkbox interactive<CR>")
-  --   end
-  --
-  -- },
 }
