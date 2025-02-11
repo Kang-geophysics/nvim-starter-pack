@@ -29,6 +29,14 @@ return {
           {
             name = "Projects",
             path = "~/vaults/proj",
+          },
+          {
+            name = "Windows",
+            path = "/mnt/c/Users/kangh/vaults/obsi",
+            -- WSL user needs to install `wsl-open` with npm for the command `:ObsidianOpen`
+            -- `npm install -g wsl-open` (WSL CLI)
+            -- MacOs user needs to install pngpaste with brew for the command `:ObsidianPasteImg`
+            -- `brew install pngpaste`
           }
         },
         notes_subdir = "Inbox",
