@@ -58,3 +58,7 @@ mapKey("<C-o>k", ":lua require('obsidian').util.toggle_checkbox()<CR>") -- Toggl
 
 -- Lazy Git
 mapKey("<leader>lg", ":LazyGit<CR>")
+
+-- Times tamps using strftime
+mapKey("<M-1>", "<C-r>=strftime('%Y-%m-%d')<CR>", "i")
+mapKey("<M-2>", "<C-r>=strftime('%H:%M')<CR>", "i")
