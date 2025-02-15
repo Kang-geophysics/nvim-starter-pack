@@ -27,10 +27,6 @@ return {
             path = "~/vaults/obsi",
           },
           {
-            name = "Projects",
-            path = "~/vaults/proj",
-          },
-          {
             name = "Windows",
             path = "/mnt/c/Users/kangh/vaults/obsi",
             -- WSL user needs to install `wsl-open` with npm for the command `:ObsidianOpen`
@@ -48,6 +44,9 @@ return {
           time_format = "%H:%M",
           -- A map for custom variables, the key should be the variable and the value a function
           substitutions = {},
+        },
+        daily_notes = {
+          folder = "Journal",
         },
         ---@param title string|?
         ---@return string
