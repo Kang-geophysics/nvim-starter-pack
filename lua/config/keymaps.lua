@@ -20,8 +20,8 @@ mapKey("<C-h>", "<C-w>h")      -- Left
 mapKey("<C-j>", "<C-w>j")      -- Down
 mapKey("<C-k>", "<C-w>k")      -- Up
 mapKey("<C-l>", "<C-w>l")      -- Right
-mapKey("<C-right>", ":bn<CR>") -- Navigate next buffer
-mapKey("<C-left>",  ":bp<CR>") -- Navigate previous buffer
+mapKey("<M-h>",  ":bp<CR>") -- Navigate previous buffer
+mapKey("<M-l>", ":bn<CR>") -- Navigate next buffer
 
 -- Clear search hl
 mapKey("<leader>nh", ":nohlsearch<CR>")
@@ -59,6 +59,6 @@ mapKey("<C-o>k", ":lua require('obsidian').util.toggle_checkbox()<CR>") -- Toggl
 -- Lazy Git
 mapKey("<leader>lg", ":LazyGit<CR>")
 
--- Times tamps using strftime
+-- Timestamps using strftime
 mapKey("<M-1>", "<C-r>=strftime('%Y-%m-%d')<CR>", "i")
 mapKey("<M-2>", "<C-r>=strftime('%H:%M')<CR>", "i")
