@@ -47,7 +47,8 @@ return {
           { name = "nvim_lsp" },                    -- lsp
           { name = "path"}, -- file system paths
           { name = "buffer"}, -- text within current buffer
-          { name = "luasnip", max_item_count = 5 }, -- snippets (date, etc.)
+          { name = 'render-markdown'}, -- render-markdown.nvim setup
+          { name = "luasnip", max_item_count = 7 }, -- snippets (date, etc.)
         }),
       })
       -- autocompletion for search patterns ("/","?")

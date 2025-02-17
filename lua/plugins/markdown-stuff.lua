@@ -10,6 +10,51 @@ return {
     ft = { "markdown" },
   },
   {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = {"nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons"},
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    config = function()
+      require('render-markdown').setup({
+        checkbox = {
+          custom = {
+            unchecked = {
+              raw = '[ ]',
+              rendered = '󰄱',
+              highlight = 'RenderMarkdownCheckboxTodo',
+              scope_highlight = nil
+            },
+            done = {
+              raw = '[x]',
+              rendered = '',
+              highlight = 'RenderMarkdownCheckboxDone',
+              scope_highlight = nil
+
+            },
+            progress = {
+              raw = '[>]',
+              rendered = '',
+              highlight = 'RenderMarkdownCheckboxProgress',
+              scope_highlight = nil
+            },
+            important = {
+              raw = '[!]',
+              rendered = '',
+              highlight = 'RenderMarkdownCheckboxImportant',
+              scope_highlight = nil
+            },
+            cancled = {
+              raw = '[-]',
+              rendered = 'X',
+              highlight = 'RenderMarkdownCheckboxCancled',
+              scope_highlight = nil
+            },
+          }
+        }
+      })
+    end
+  },
+  {
     "epwalsh/obsidian.nvim",
     version = "*", -- recommended, use latest release instead of latest commit
     lazy = true,
@@ -84,7 +129,7 @@ return {
             [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
             ["x"] = { char = "", hl_group = "ObsidianDone" },
             [">"] = { char = "", hl_group = "ObsidianRightArrow" },
-            ["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
+            ["-"] = { char = "󰰱", hl_group = "ObsidianCanceled" },
             ["!"] = { char = "", hl_group = "ObsidianImportant" },
             -- Replace the above with this if you don't have a patched font:
             -- [" "] = { char = "☐", hl_group = "ObsidianTodo" },
